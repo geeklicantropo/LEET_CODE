@@ -12,14 +12,10 @@ size of nums.
 Return k.
 '''
 def removeElement(nums, val):
-    count = 0
-    for i in range(0, (len(nums))):
-        if nums[i] == val:
-            nums[-i] = nums[i]
-            nums = nums.pop()
-            count += 1
-    #nums = nums[:-count]
-    return print((nums))
+    while val in nums:
+        nums.remove(val)
+        
+    return (print(nums))
 
 
 
