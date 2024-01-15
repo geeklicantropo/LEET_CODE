@@ -12,19 +12,19 @@ def removeDuplicates(nums):
         else:
             return len(nums)
     else:
-        while i < len(nums) and j < (len(nums) - 1):
+        while i < len(nums) and j < (len(nums)):
             if nums[i] == nums[j]:
                 nums.remove(nums[j])
-                j = i+1
-                i += 1
+                j = i + 1
+                #i += 1
             else:
                 i += 1
-                j = i+1
-        return (len(nums))
+                j += 1
+        return (print(nums))
 
 
-#nums = [0,0,1,1,1,2,2,3,3,4] 
-nums = [1,2,2]
+nums = [0,1,1,1,2,2,3,3,4] 
+#nums = [1,2,2]
 #nums = [1,1,1]       
 removeDuplicates(nums)
 
